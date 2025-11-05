@@ -1,0 +1,85 @@
+{
+  "dataset": {
+    "name": "PKU",
+    "path": "https://huggingface.co/datasets/rmovva/wimhf-data/resolve/main/data/pku.json",
+    "split_columns": [
+      "prompt"
+    ],
+    "train_split_size": 0.8,
+    "split_random_seed": 42,
+    "random_seed": 42,
+    "max_words_prompt": 128,
+    "max_words_response": 128
+  },
+  "embedding": {
+    "model": "text-embedding-3-small",
+    "n_workers": 2
+  },
+  "sae": {
+    "M": 32,
+    "K": 4,
+    "prefix_lengths": [
+      8,
+      32
+    ],
+    "batch_size": 256,
+    "n_epochs": 50,
+    "min_epochs": 10,
+    "patience": 3,
+    "learning_rate": 0.0005,
+    "dead_neuron_threshold_steps": 64
+  },
+  "interpretation": {
+    "interpreter_model": "gpt-5",
+    "annotator_model": "gpt-5-mini",
+    "abbreviator_model": "gpt-5-mini",
+    "n_candidates": 5,
+    "interpret_n_examples": 10,
+    "interpret_sampling_kwargs": {
+      "percentile_bin": [
+        95,
+        100
+      ],
+      "nonzero_only": true,
+      "swap_negative_response_pairs": true
+    },
+    "scoring_n_examples": 300,
+    "scoring_sampling_kwargs": {
+      "high_percentile": [
+        50,
+        100
+      ],
+      "low_percentile": [
+        0,
+        50
+      ],
+      "nonzero_only": true
+    },
+    "min_correlation": 0.0,
+    "p_value_threshold": 0.0015625,
+    "n_workers_interpretation": 80,
+    "n_workers_annotation": 300,
+    "timeout": 120.0,
+    "max_interpretation_tokens": 20000,
+    "completion_kwargs": {
+      "reasoning_effort": "low"
+    }
+  },
+  "selection": {
+    "controls": [
+      "length_delta"
+    ],
+    "lasso_top_k": [
+      5,
+      10
+    ],
+    "max_samples_lasso": null,
+    "classification": true,
+    "standardize": true
+  },
+  "runtime": {
+    "checkpoint_dir": "outputs/pku/checkpoints",
+    "cache_dir": "outputs/pku/emb_cache",
+    "retrain_sae": true
+  }
+}

@@ -1,0 +1,15 @@
+The following text describes a concept.
+Please abbreviate the concept as much as possible without making it harder to understand.
+- For example, if the concept uses a list of redundant adjectives or nouns, try to use fewer.
+- Only output the abbreviation, no other text.
+- Be careful not to change the meaning; for example, if the concept says "does not emphasize family", do not say "de-emphasizes family", but you can say "doesn't mention family".
+
+Examples:
+    Concept: "focuses on data analytics/AI and metric-driven methods"
+    Abbreviation: "focuses on analytics, AI, & metrics"
+
+    Concept: "emphasizes a creative, exploratory mindset rather than structured, standardized procedures"
+    Abbreviation: "emphasizes creativity over structured procedures"
+
+Concept: {concept}
+Abbreviation:

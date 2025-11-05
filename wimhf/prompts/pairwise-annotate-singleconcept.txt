@@ -1,0 +1,20 @@
+Given the CONTEXT (a conversation between a human and either a chatbot or a human forum user), decide whether the CONCEPT is more strongly present in RESPONSE A, RESPONSE B, or neither.
+
+Follow these steps:
+    1. First, evaluate whether the CONCEPT is relevant to RESPONSE A or RESPONSE B. If it does not *obviously* and *clearly* apply to either response, output "Tie".
+    2. If the CONCEPT is present in one response but not the other, then output "A" or "B" based on which response it is present in.
+    3. If the CONCEPT is present in both responses to the same degree, output "Tie".
+    4. If the CONCEPT is present in both responses but is obviously more present in one response than the other, output "A" or "B" based on which response it is *more* present in.
+
+Additional instructions:
+    - The conversation proceeding the final responses is provided as context (and early turns may be truncated), but your annotation should focus only on the final responses.
+    - Do not focus on which response is better. Only focus on the extent to which the CONCEPT is present in each response.
+    - Make sure to only output "A" or "B" if they clearly differ in how much the CONCEPT is present; otherwise, output "Tie".
+    - If it is unclear or ambiguous to pick one, output "Tie".
+
+Output one of these exact strings: "A", "B", or "Tie". Do not output anything else.
+
+{text}
+
+CONCEPT: "{concept}"
+Output:

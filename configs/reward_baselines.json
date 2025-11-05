@@ -1,0 +1,74 @@
+[
+  {
+    "name": "ChatbotArena",
+    "path": "https://huggingface.co/datasets/rmovva/wimhf-data/resolve/main/data/chatbot_arena.json",
+    "split_columns": [
+      "prompt"
+    ],
+    "train_split_size": 0.8,
+    "split_random_seed": 42,
+    "sae_checkpoint_path": "outputs/chatbot_arena/checkpoints/SAE_matryoshka_M=32_K=4_prefixes=8-32.pt"
+  },
+  {
+    "name": "PKU",
+    "path": "https://huggingface.co/datasets/rmovva/wimhf-data/resolve/main/data/pku.json",
+    "split_columns": [
+      "prompt"
+    ],
+    "train_split_size": 0.8,
+    "split_random_seed": 42,
+    "sae_checkpoint_path": "outputs/pku/checkpoints/SAE_matryoshka_M=32_K=4_prefixes=8-32.pt"
+  },
+  {
+    "name": "Reddit",
+    "path": "https://huggingface.co/datasets/rmovva/wimhf-data/resolve/main/data/reddit.json",
+    "split_columns": [
+      "prompt"
+    ],
+    "train_split_size": 0.8,
+    "split_random_seed": 42,
+    "sae_checkpoint_path": "outputs/reddit/checkpoints/SAE_matryoshka_M=32_K=4_prefixes=8-32.pt"
+  },
+  {
+    "name": "HH-RLHF",
+    "path": "https://huggingface.co/datasets/rmovva/wimhf-data/resolve/main/data/hh_rlhf.json",
+    "split_columns": [
+      "prompt"
+    ],
+    "train_split_size": 0.6,
+    "split_random_seed": 42,
+    "sae_checkpoint_path": "outputs/hh_rlhf/checkpoints/SAE_matryoshka_M=32_K=4_prefixes=8-32.pt"
+  },
+  {
+    "name": "CommunityAlign",
+    "path": "https://huggingface.co/datasets/rmovva/wimhf-data/resolve/main/data/community_alignment.json",
+    "split_columns": [
+      "prompt",
+      "conversation_id"
+    ],
+    "train_split_size": 0.6,
+    "split_random_seed": 42,
+    "sae_checkpoint_path": "outputs/community_alignment/checkpoints/SAE_matryoshka_M=32_K=4_prefixes=8-32.pt"
+  },
+  {
+    "name": "PRISM",
+    "path": "https://huggingface.co/datasets/rmovva/wimhf-data/resolve/main/data/prism.json",
+    "split_columns": [
+      "prompt",
+      "conversation_id"
+    ],
+    "train_split_size": 0.8,
+    "split_random_seed": 42,
+    "sae_checkpoint_path": "outputs/prism/checkpoints/SAE_matryoshka_M=32_K=4_prefixes=8-32.pt"
+  },
+  {
+    "name": "Tulu",
+    "path": "https://huggingface.co/datasets/rmovva/wimhf-data/resolve/main/data/tulu.json",
+    "split_columns": [
+      "prompt"
+    ],
+    "train_split_size": 0.8,
+    "split_random_seed": 42,
+    "sae_checkpoint_path": "outputs/tulu/checkpoints/SAE_matryoshka_M=32_K=4_prefixes=8-32.pt"
+  }
+]

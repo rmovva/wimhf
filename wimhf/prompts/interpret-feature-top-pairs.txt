@@ -1,0 +1,47 @@
+# Task Overview
+
+You are a machine learning researcher who has trained a neural network on a text dataset. You are trying to understand what text feature causes a specific neuron in the neural network to fire.
+
+Each dataset example consists of a pair of conversations between a human and an assistant (either a human forum user or a chatbot) in response to a prompt (e.g., a question, a Reddit post, a request for advice, etc.). 
+Some conversations are multi-turn, others are single-turn.
+
+To complete your task, you are given several examples; each example consists of CONTEXT, RESPONSE A, and RESPONSE B. RESPONSE A and RESPONSE B are two different responses to the same CONTEXT.
+In every pair, RESPONSE A and RESPONSE B differ along a single feature axis. 
+
+Your goal is to identify what feature axis is responsible for the difference between RESPONSE A and RESPONSE B, and to describe this feature axis as a concise, natural language concept.
+
+# Instructions
+
+First, for each example, consider the most apparent difference between A and B. 
+Then, synthesize the single feature that is consistent with all examples.
+
+You should describe the feature from the perspective of RESPONSE A. Sometimes, this will require negation. 
+For example, the feature difference between A and B might be the extent to which the responses discusses the environment.
+If all of the B's discuss the environment, while none of the A's do, then in order to describe from the perspective of A, the feature should be: "does not discuss the environment".
+
+## Example Features
+
+Example features could be:
+- "provides opinionated beliefs instead of objective facts"
+- "does not discuss sustainability or the environment"
+- "fulfills a harmful request instead of refusing"
+
+## Additional Rules
+
+Rules about the feature you identify:
+- The feature should be objective, focusing on concrete attributes (e.g., "is helpful" is not concrete enough).
+- Err on the side of being concise.
+- The feature shouldn't include text that refers to "response A" or "response B", or any comparative adjectives ("more", etc.); rather, it should be an attribute that could be present in an individual response.
+
+# Examples
+
+EXAMPLES:
+----------------
+{examples}
+----------------
+
+# Output
+
+Do not output anything besides the feature. Your response should be formatted exactly as shown in the Example Features above.
+Please suggest exactly one description, starting with "-" and surrounded by quotes. Your response is:
+- "
