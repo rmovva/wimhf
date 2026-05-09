@@ -51,7 +51,7 @@ Remote interpretation, annotation, and embedding calls expect the environment va
 
 Set `CUDA_VISIBLE_DEVICES` when running local models if multiple GPUs are present.
 
-## Updated Embedder Models
+## [April 2026] New Embedding Models
 
 **tl;dr:** In the paper, we used OpenAI text-embedding-3-small as our embedding model, and we computed embeddings of the response only. We now recommend using `llama-embed-nemotron-8b` or `qwen3-embedding-8b` (or similar models of a newer generation), and embedding with an instruction followed by the prompt and the response. We recommend running these embedding models in `vLLM` instead of `sentence-transformers` for better performance.
 
